@@ -24,7 +24,7 @@ echo "Configuring the SDK"
 mkdir -p /root/.android
 touch /root/.android/repositories.cfg
 yes | sdkmanager --licenses > /dev/null
-sdkmanager "tools" "platform-tools" "build-tools;${BUILD_TOOLS_VERSION}" "platforms;android-25" > /dev/null
+sdkmanager "tools" "platform-tools" "build-tools;${BUILD_TOOLS_VERSION}" "platforms;android-${TARGET_API}" > /dev/null
 sdkmanager "cmake;${CMAKE_VERSION}" > /dev/null
 sdkmanager "ndk;${NDK_VERSION}" > /dev/null
 

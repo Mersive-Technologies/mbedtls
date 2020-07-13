@@ -2,7 +2,7 @@
 
 echo "Renaming asset to a descriptive filename"
 BUILD_TIME=`date +%F_%T`
-FILENAME=/opt/mbedtls-${TARGET}-${DRONE_SOURCE_BRANCH}-${BUILD_TIME}-${DRONE_COMMIT_SHA:0:8}.tar.gz
+FILENAME=/opt/mbedtls-${ANDROID_ABI}-${DRONE_SOURCE_BRANCH}-${BUILD_TIME}-${DRONE_COMMIT_SHA:0:8}.tar.gz
 
 mkdir -p mbedtls/include
 cp -R include/mbedtls/*.h mbedtls/include
